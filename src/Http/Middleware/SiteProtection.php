@@ -20,6 +20,7 @@ class SiteProtection
     public function handle($request, Closure $next, $guard = null)
     {
         $password = config('site-protection.passwords');
+        $cookieLifeTime = confi('site-protection.cookie_life_time');
 
         if (empty($password)) {
             return $next($request);
@@ -28,7 +29,7 @@ class SiteProtection
         $passwords = explode(',', $password);
 
         if (in_array($request->get('site-password-protected'), $passwords)) {
-            setcookie('site-password-protected', encrypt($request->get('site-password-protected')), 0, '/');
+            setcookie('site-password-protected', encrypt($request->get('site-password-protected')), $cookieLifeTime, '/');
             return redirect($request->url());
         }
 

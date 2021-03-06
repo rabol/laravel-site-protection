@@ -1,12 +1,12 @@
 {
-    "name": "elic-dev/laravel-site-protection",
+    "name": "rabol/laravel-site-protection",
     "description": "Protect your site with a simple password form",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Matthias Lill",
-            "email": "m.lill@gmx.de"
+            "name": "Steen Rabol",
+            "email": "steen@rabol.com"
         }
     ],
     "require": {
@@ -14,13 +14,13 @@
     },
     "autoload": {
         "psr-4": {
-            "ElicDev\\SiteProtection\\": "src/"
+            "Rabol\\SiteProtection\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ElicDev\\SiteProtection\\SiteProtectionServiceProvider"
+                "Rabol\\SiteProtection\\SiteProtectionServiceProvider"
             ]
         }
     }

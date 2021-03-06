@@ -12,7 +12,7 @@ This does not protect any assets files like css or images.
 ## Installation
 
 ```
-composer require elic-dev/laravel-site-protection
+composer require rabol/laravel-site-protection
 ```
 
 ### Laravel >= 5.2
