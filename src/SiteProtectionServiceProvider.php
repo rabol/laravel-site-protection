@@ -1,6 +1,6 @@
 <?php
 
-namespace ElicDev\SiteProtection;
+namespace Rabol\SiteProtection;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ElicDev\SiteProtection\Http\Middleware;
+namespace Rabol\SiteProtection\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Encryption\DecryptException;

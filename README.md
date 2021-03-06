@@ -22,7 +22,7 @@ This package requires at least the Laravel Framework of version **5.2**.
 Add ServiceProvider to the providers array in `app/config/app.php`.
 
 ```
-ElicDev\SiteProtection\SiteProtectionServiceProvider::class,
+Rabol\SiteProtection\SiteProtectionServiceProvider::class,
 ```
 
 ### Laravel >= 5.5
@@ -37,7 +37,7 @@ Add Middleware to `app/Http/Kernel.php` or specific routes you want to protect.
 protected $middlewareGroups = [
     'web' => [
         ...
-        \ElicDev\SiteProtection\Http\Middleware\SiteProtection::class,
+        \Rabol\SiteProtection\Http\Middleware\SiteProtection::class,
     ],
     ...
 ];
@@ -49,6 +49,7 @@ Add your password to `.env`. You can use multiple passwords separated by comma.
 
 ```
 SITE_PROTECTION_PASSWORDS=password1,password2
+SITE_PROTECTION_COOKIE_LIFE_TIME=3600
 ```
 
 To revoke access to your site simply change the password. This requires every
@@ -61,7 +62,7 @@ You can modify the view that handles password entry by publishing the views to y
 Run the following command:
 
 ```
-php artisan vendor:publish --provider="ElicDev\SiteProtection\SiteProtectionServiceProvider" --tag=views
+php artisan vendor:publish --provider="Rabol\SiteProtection\SiteProtectionServiceProvider" --tag=views
 ```
 
 You can now make the changes in `resources/vendor/views/site-protection/site-protection-form.blade.php`.
